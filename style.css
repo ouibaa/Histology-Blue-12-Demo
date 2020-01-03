@@ -57,6 +57,7 @@ h1{
 
 nav {
   height: 50px;
+  position: relative;
 }
 .profile-image, .nav-links{
   display: inline-block
@@ -75,14 +76,14 @@ nav {
 }
 
 .nav-links li {
-  float: left;
+  float: right;
 }
 
 .nav-links li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 15px 16px;
   text-decoration: none;
 }
 
@@ -94,7 +95,7 @@ nav {
 main{
   top: 5px;
   height: 1000px;
-  position: relative
+  position: relative;
 }
 .content_sidebar{
   position: absolute;
