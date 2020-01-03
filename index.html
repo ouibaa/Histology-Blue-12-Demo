@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Video Timing Test</title>
+  <link rel="stylesheet" href="../../../css/pages.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body onLoad="loadfunction()">
+  <nav>
+    <div class="profile-image">
+      <img src="../../../images/profile.jpg" alt="" />
+      <a href="../../..">
+        <div id="profile-image-overlay"></div>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="../../portfolio">Portfolio</a>
+      <a href="../../educational_resources">Educational resources</a>
+      <a href="../../presentations">Presentations</a>
+      <a href="../../hobbies">
+        <div id="active-tab">Things I do for fun</div>
+      </a>
+      <a href="../../about">About me</a>
+    </div>
+  </nav>
+  <main>
+    <div id="videoTab">
+      <div class="mydivheader"></div>
+      <div id="myVideo"></div>
+    </div>
+
+    <div id="infoTab">
+      <div class="mydivheader">
+        Slide information
+      </div>
+      <div id="slideInfo"></div>
+    </div>
+
+    <div id="histology">
+      <div class="mydivheader"></div>
+      <div id="openseadragon" style="width: 100%; height: 100%;"></div>
+    </div>
+
+    <div class="side-nav">
+      <div class="side-nav-list">
+        <div class="side-nav-list-item" onClick="loadSlide('ye17')">
+          <b>Slide Yellow - 17</b> <br />Renal cell carcinoma
+        </div>
+        <div class="side-nav-list-item" onClick="loadSlide('br17')">
+          <b>Slide Brown - 17</b> <br />Transitional cell carcinoma
+        </div>
+        <div class="side-nav-list-item" onClick="loadSlide('bl17')">
+          <b>Slide Blue - 17</b> <br />Melanoma
+        </div>
+        <div class="side-nav-list-item" onClick="loadSlide('p17')">
+          <b>Slide Purple - 17</b> <br />Basal cell carcinoma
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- include the hardcoded JSON data for the slide info -->
+  <script type="text/javascript" src="slidedata.js"></script>
+  <script src="./openseadragon-bin-2.4.1/openseadragon.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
