@@ -6,9 +6,11 @@ function loadSlide() {
 };
 
 function slidePosition() {
-  slideData.slideTimings.map(item => {
-    var timeData = item.split("&").map(Number)
-    if (this.currentTime - timeData[0] < 1) {
+  timingList.map(item => {
+    var timeData = item[1].split(",").map(Number)
+    // console.log(timeData)
+    console.log(this.currentTime)
+    if (Math.abs(this.currentTime - timeData[0]) < 1.5) {
       moveViewPort(timeData[1], timeData[2], timeData[3]);
     }
   })
@@ -25,7 +27,7 @@ var viewPort = viewer.viewport;
 
 window.onload = function () {
   video = document.createElement("video");
-  video.setAttribute("id", "Myvideo");
+  video.setAttribute("id", "videoPlayer");
   video.setAttribute("controls", "controls");
   video.addEventListener("timeupdate", slidePosition, false);
   document.getElementById("slideVideo").appendChild(video);
@@ -39,8 +41,6 @@ function moveViewPort(posX, posY, zoomDeg) {
 
 console.log(slideData);
 var timingData = slideData['slideTimings'][0].split("&").map(Number)
-console.log(timingData)
-
 //function to output points on the slide
 var update_points = setInterval(function () {
   console.log(
@@ -52,3 +52,7 @@ var update_points = setInterval(function () {
     Math.round(viewPort.getZoom() * 100) / 100
   );
 }, 3000);
+
+var timingList = Object.keys(slideData.slideTimings).map(function (key) {
+  return [Number(key), slideData.slideTimings[key]];
+});

@@ -109,6 +109,10 @@ main{
   width: 75%;
   right: 0;
 }
+
+#videoPlayer{
+  width: 100%;
+}
 /* #videoTab,
 #histology,
 #infoTab {
