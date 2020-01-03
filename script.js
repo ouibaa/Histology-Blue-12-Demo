@@ -36,7 +36,7 @@ function slidePosition() {
 var viewer = OpenSeadragon({
   id: "openseadragon",
   prefixUrl: "./openseadragon-bin-2.4.1/images/",
-  tileSources: "./Histology slide A/histologyA/rim.xml"
+  tileSources: "./blue-12/blue-0.xml"
 });
 var viewPort = viewer.viewport;
 

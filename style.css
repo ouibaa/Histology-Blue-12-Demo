@@ -66,24 +66,46 @@ nav {
   height: 50px;
 }
 
-.nav-links{
-  top: 5px;
+.nav-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav-links li {
+  float: left;
+}
+
+.nav-links li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-links li a:hover {
+  background-color: #111;
 }
 
 main{
+  top: 5px;
   height: 1000px;
   position: relative
 }
 .content_sidebar{
   position: absolute;
-  width: 30%;
+  width: 25%;
   height: 100%
 }
 
 #histology{
   position: absolute;
   height: 100%;
-  width: 70%;
+  width: 75%;
   right: 0;
 }
 /* #videoTab,
